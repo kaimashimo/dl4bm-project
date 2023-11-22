@@ -28,8 +28,9 @@ checkpoint:
   time: latest
 
 wandb:
-  project: ???
-  entity: ???
+  project: "disabled"
+  conf: "disabled"
+  entity: "disabled"
   mode: "disabled" # Can set to offline, disabled, online
 
 iter_num: 600
