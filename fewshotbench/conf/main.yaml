@@ -30,6 +30,6 @@ checkpoint:
 wandb:
   project: ???
   entity: ???
-  mode: "online" # Can set to offline, disabled
+  mode: "disabled" # Can set to offline, disabled, online
 
 iter_num: 600
