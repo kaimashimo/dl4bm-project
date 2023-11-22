@@ -7,7 +7,6 @@ from torch.autograd import Variable
 import math
 
 from methods.meta_template import MetaTemplate
-from utils.data_utils import one_hot
 
 
 class ProtoNet(MetaTemplate):
