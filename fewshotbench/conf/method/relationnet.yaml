@@ -1,0 +1,7 @@
+defaults:
+  - meta_base
+
+name: relationnet
+
+cls:
+  _target_: methods.relationnet.RelationNet

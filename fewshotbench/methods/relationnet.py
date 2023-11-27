@@ -9,12 +9,12 @@ import math
 from methods.meta_template import MetaTemplate
 
 
-class ProtoNet(MetaTemplate):
+class RelationNet(MetaTemplate):
     def __init__(self, backbone, n_way, n_support):
-        super(ProtoNet, self).__init__(backbone, n_way, n_support)
+        super(RelationNet, self).__init__(backbone, n_way, n_support)
         self.loss_fn = nn.CrossEntropyLoss()
 
-        self.relation_module = RelationNetwork( self.feat_dim , 8, self.loss_type ) #relation net features are not pooled, so self.feat_dim is [dim, w, h] 
+        self.relation_module = RelationModule( self.feat_dim , 8, self.loss_type ) #relation net features are not pooled, so self.feat_dim is [dim, w, h] 
 
     def set_forward(self, x, is_feature=False):
         z_support, z_query = self.parse_feature(x, is_feature)
@@ -82,18 +82,22 @@ class RelationConvBlock(nn.Module):
         return out
     
 
-class RelationNetwork(nn.Module):
+class RelationModule(nn.Module):
 
-    def __init__(self, in_layers, out_layers, hidden_size, padding = 0):
-
-        self.conv1 = RelationConvBlock(in_layers[0], out_layers[0], padding = padding)
-        self.conv2 = RelationConvBlock(in_layers[1], out_layers[1], padding = padding)
+    def __init__(self, input_size, hidden_size, padding = 0):
+        super(RelationModule, self).__init__()
         
-        self.fc1 = nn.Linear(out_layers[1]*3*3,hidden_size)
+        out_layers = input_size[0]* input_size[1] * input_size[2] if type(input_size) == list else input_size
+
+
+        self.conv1 = RelationConvBlock(out_layers, out_layers, padding = padding)
+        self.conv2 = RelationConvBlock(out_layers, out_layers, padding = padding)
+        
+
+        self.fc1 = nn.Linear(out_layers,hidden_size)
         self.fc2 = nn.Linear(hidden_size,1)
 
         self.relu = nn.ReLU()
-        self.sigmoid = nn.Sigmoid()
 
         self.layers = self.layers + [self.fc1, self.fc2, self.relu, self.sigmoid]
         self.layers = nn.Sequential(*self.layers)
@@ -108,7 +112,7 @@ class RelationNetwork(nn.Module):
         out = self.conv2(out)
         out = out.view(out.size(0),-1)
         out = self.relu(self.fc1(out))
-        out = self.sigmoid(self.fc2(out))
+        out = self.fc2(out)
         return out
 
 
