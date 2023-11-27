@@ -16,3 +16,15 @@ Time: 20231127-121334, Setting: swissprot-test-FCNet-matchingnet 5shot 5way, Acc
 Time: 20231127-125044, Setting: swissprot-train-FCNet-baseline 5shot 5way, Acc: 92.78% +- 0.40%, Model: checkpoints/exp1/swissprot/baseline_FCNet/20231127_121455/best_model.tar 
 Time: 20231127-125539, Setting: swissprot-val-FCNet-baseline 5shot 5way, Acc: 67.50% +- 0.76%, Model: checkpoints/exp1/swissprot/baseline_FCNet/20231127_121455/best_model.tar 
 Time: 20231127-130027, Setting: swissprot-test-FCNet-baseline 5shot 5way, Acc: 62.67% +- 0.64%, Model: checkpoints/exp1/swissprot/baseline_FCNet/20231127_121455/best_model.tar 
+Time: 20231127-212556, Setting: tabula_muris-train-FCNet-protonet 5shot 5way, Acc: 98.48% +- 0.22%, Model: checkpoints/exp1/tabula_muris/protonet_FCNet/20231127_212357/best_model.tar 
+Time: 20231127-212631, Setting: tabula_muris-val-FCNet-protonet 5shot 5way, Acc: 89.30% +- 0.61%, Model: checkpoints/exp1/tabula_muris/protonet_FCNet/20231127_212357/best_model.tar 
+Time: 20231127-212718, Setting: tabula_muris-test-FCNet-protonet 5shot 5way, Acc: 89.44% +- 0.62%, Model: checkpoints/exp1/tabula_muris/protonet_FCNet/20231127_212357/best_model.tar 
+Time: 20231127-213703, Setting: tabula_muris-train-FCNet-maml 5shot 5way, Acc: 97.26% +- 0.36%, Model: checkpoints/exp1/tabula_muris/maml_FCNet/20231127_212833/best_model.tar 
+Time: 20231127-213738, Setting: tabula_muris-val-FCNet-maml 5shot 5way, Acc: 85.90% +- 0.76%, Model: checkpoints/exp1/tabula_muris/maml_FCNet/20231127_212833/best_model.tar 
+Time: 20231127-213813, Setting: tabula_muris-test-FCNet-maml 5shot 5way, Acc: 86.28% +- 0.69%, Model: checkpoints/exp1/tabula_muris/maml_FCNet/20231127_212833/best_model.tar 
+Time: 20231127-214349, Setting: tabula_muris-train-FCNet-matchingnet 5shot 5way, Acc: 97.94% +- 0.32%, Model: checkpoints/exp1/tabula_muris/matchingnet_FCNet/20231127_213929/best_model.tar 
+Time: 20231127-214429, Setting: tabula_muris-val-FCNet-matchingnet 5shot 5way, Acc: 86.81% +- 0.75%, Model: checkpoints/exp1/tabula_muris/matchingnet_FCNet/20231127_213929/best_model.tar 
+Time: 20231127-214519, Setting: tabula_muris-test-FCNet-matchingnet 5shot 5way, Acc: 83.67% +- 0.78%, Model: checkpoints/exp1/tabula_muris/matchingnet_FCNet/20231127_213929/best_model.tar 
+Time: 20231127-222927, Setting: tabula_muris-train-FCNet-baseline 5shot 5way, Acc: 99.14% +- 0.14%, Model: checkpoints/exp1/tabula_muris/baseline_FCNet/20231127_214638/best_model.tar 
+Time: 20231127-223417, Setting: tabula_muris-val-FCNet-baseline 5shot 5way, Acc: 88.76% +- 0.60%, Model: checkpoints/exp1/tabula_muris/baseline_FCNet/20231127_214638/best_model.tar 
+Time: 20231127-223914, Setting: tabula_muris-test-FCNet-baseline 5shot 5way, Acc: 90.48% +- 0.56%, Model: checkpoints/exp1/tabula_muris/baseline_FCNet/20231127_214638/best_model.tar 
