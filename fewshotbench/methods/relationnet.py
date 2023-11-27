@@ -87,11 +87,13 @@ class RelationModule(nn.Module):
     def __init__(self, input_size, hidden_size, padding = 0):
         super(RelationModule, self).__init__()
         
-        self.conv1 = RelationConvBlock(input_size[0], input_size[0], padding = padding)
-        self.conv2 = RelationConvBlock(input_size[0], input_size[0], padding = padding)
+        out_layers = input_size[0]* input_size[1] * input_size[2] if type(input_size) == list else input_size
+
+
+        self.conv1 = RelationConvBlock(out_layers, out_layers, padding = padding)
+        self.conv2 = RelationConvBlock(out_layers, out_layers, padding = padding)
         
 
-        out_layers = input_size[0]* input_size[1] * input_size[2] if type(input_size) == list else input_size
         self.fc1 = nn.Linear(out_layers,hidden_size)
         self.fc2 = nn.Linear(hidden_size,1)
 
