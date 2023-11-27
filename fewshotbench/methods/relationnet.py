@@ -84,17 +84,18 @@ class RelationConvBlock(nn.Module):
 
 class RelationModule(nn.Module):
 
-    def __init__(self, in_layers, out_layers, hidden_size, padding = 0):
+    def __init__(self, input_size, hidden_size, padding = 0):
         super(RelationModule, self).__init__()
-
-        self.conv1 = RelationConvBlock(in_layers[0], out_layers[0], padding = padding)
-        self.conv2 = RelationConvBlock(in_layers[1], out_layers[1], padding = padding)
         
-        self.fc1 = nn.Linear(out_layers[1]*3*3,hidden_size)
+        self.conv1 = RelationConvBlock(input_size[0], input_size[0], padding = padding)
+        self.conv2 = RelationConvBlock(input_size[0], input_size[0], padding = padding)
+        
+
+        out_layers = input_size[0]* input_size[1] * input_size[2] if type(input_size) == list else input_size
+        self.fc1 = nn.Linear(out_layers,hidden_size)
         self.fc2 = nn.Linear(hidden_size,1)
 
         self.relu = nn.ReLU()
-        self.sigmoid = nn.Sigmoid()
 
         self.layers = self.layers + [self.fc1, self.fc2, self.relu, self.sigmoid]
         self.layers = nn.Sequential(*self.layers)
@@ -109,7 +110,7 @@ class RelationModule(nn.Module):
         out = self.conv2(out)
         out = out.view(out.size(0),-1)
         out = self.relu(self.fc1(out))
-        out = self.sigmoid(self.fc2(out))
+        out = self.fc2(out)
         return out
 
 
