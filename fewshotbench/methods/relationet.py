@@ -9,12 +9,12 @@ import math
 from methods.meta_template import MetaTemplate
 
 
-class ProtoNet(MetaTemplate):
+class RelationNet(MetaTemplate):
     def __init__(self, backbone, n_way, n_support):
-        super(ProtoNet, self).__init__(backbone, n_way, n_support)
+        super(RelationNet, self).__init__(backbone, n_way, n_support)
         self.loss_fn = nn.CrossEntropyLoss()
 
-        self.relation_module = RelationNetwork( self.feat_dim , 8, self.loss_type ) #relation net features are not pooled, so self.feat_dim is [dim, w, h] 
+        self.relation_module = RelationModule( self.feat_dim , 8, self.loss_type ) #relation net features are not pooled, so self.feat_dim is [dim, w, h] 
 
     def set_forward(self, x, is_feature=False):
         z_support, z_query = self.parse_feature(x, is_feature)
@@ -82,9 +82,10 @@ class RelationConvBlock(nn.Module):
         return out
     
 
-class RelationNetwork(nn.Module):
+class RelationModule(nn.Module):
 
     def __init__(self, in_layers, out_layers, hidden_size, padding = 0):
+        super(RelationModule, self).__init__()
 
         self.conv1 = RelationConvBlock(in_layers[0], out_layers[0], padding = padding)
         self.conv2 = RelationConvBlock(in_layers[1], out_layers[1], padding = padding)
