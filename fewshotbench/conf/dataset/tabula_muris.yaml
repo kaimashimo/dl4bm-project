@@ -4,17 +4,18 @@ defaults:
   - classification_base
 
 dataset:
-  name: swissprot
+  name: tabula_muris
   simple_cls:
-    _target_: datasets.prot.swissprot.SPSimpleDataset
+    _target_: datasets.cell.tabula_muris.TMSimpleDataset
 
   set_cls:
-    _target_: datasets.prot.swissprot.SPSetDataset
+    _target_: datasets.cell.tabula_muris.TMSetDataset
 
 backbone:
   _target_: backbones.fcnet.FCNet
-  layer_dim: [512, 512]
+  layer_dim: [64, 64]
 
+# For baseline, how many total classes
 train_classes: 59
 
 n_way: 5
