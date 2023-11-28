@@ -3,7 +3,6 @@
 defaults:
   - classification_base
 
-
 dataset:
   name: swissprot
   simple_cls:
@@ -14,11 +13,10 @@ dataset:
 
 backbone:
   _target_: backbones.fcnet.FCNet
-  layer_dim: [ 512, 512]
+  layer_dim: [512, 512]
 
-train_classes: 7195
+train_classes: 59
 
 n_way: 5
 n_shot: 5
 n_query: 15
-

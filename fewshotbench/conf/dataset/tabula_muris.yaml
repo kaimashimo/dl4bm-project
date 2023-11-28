@@ -13,7 +13,7 @@ dataset:
 
 backbone:
   _target_: backbones.fcnet.FCNet
-  layer_dim: [ 64, 64 ]
+  layer_dim: [64, 64]
 
 # For baseline, how many total classes
 train_classes: 59
