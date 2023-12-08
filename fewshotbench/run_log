@@ -31,3 +31,6 @@ Time: 20231127-223914, Setting: tabula_muris-test-FCNet-baseline 5shot 5way, Acc
 Time: 20231202-193951, Setting: swissprot-train-FCNet-relationnet 5shot 5way, Acc: 82.34% +- 0.94%, Model: checkpoints/exp_1/swissprot/relationnet_FCNet/20231202_193703/best_model.tar 
 Time: 20231202-194032, Setting: swissprot-val-FCNet-relationnet 5shot 5way, Acc: 49.17% +- 0.94%, Model: checkpoints/exp_1/swissprot/relationnet_FCNet/20231202_193703/best_model.tar 
 Time: 20231202-194104, Setting: swissprot-test-FCNet-relationnet 5shot 5way, Acc: 38.62% +- 0.69%, Model: checkpoints/exp_1/swissprot/relationnet_FCNet/20231202_193703/best_model.tar 
+Time: 20231208-204454, Setting: tabula_muris-train-FCNet-relationnet 5shot 5way, Acc: 92.13% +- 0.66%, Model: checkpoints/exp_1/tabula_muris/relationnet_FCNet/20231208_204243/best_model.tar 
+Time: 20231208-204529, Setting: tabula_muris-val-FCNet-relationnet 5shot 5way, Acc: 77.78% +- 0.92%, Model: checkpoints/exp_1/tabula_muris/relationnet_FCNet/20231208_204243/best_model.tar 
+Time: 20231208-204605, Setting: tabula_muris-test-FCNet-relationnet 5shot 5way, Acc: 72.66% +- 0.97%, Model: checkpoints/exp_1/tabula_muris/relationnet_FCNet/20231208_204243/best_model.tar 
