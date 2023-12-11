@@ -1,3 +1,6 @@
 Time: 20231210-195418, Setting: swissprot-train-FCNet-baseline 1shot 5way, Acc: 74.54% +- 0.99%, Model: checkpoints/baseline_swissprot_1_5/swissprot/baseline_FCNet/20231210_193859/best_model.tar 
 Time: 20231210-195630, Setting: swissprot-val-FCNet-baseline 1shot 5way, Acc: 58.13% +- 1.02%, Model: checkpoints/baseline_swissprot_1_5/swissprot/baseline_FCNet/20231210_193859/best_model.tar 
 Time: 20231210-195832, Setting: swissprot-test-FCNet-baseline 1shot 5way, Acc: 54.82% +- 0.90%, Model: checkpoints/baseline_swissprot_1_5/swissprot/baseline_FCNet/20231210_193859/best_model.tar 
+Time: 20231211-090500, Setting: swissprot-train-FCNet-baseline 1shot 5way, Acc: 77.93% +- 0.92%, Model: checkpoints/baseline_swissprot_1_5/swissprot/baseline_FCNet/20231211_084941/best_model.tar 
+Time: 20231211-090714, Setting: swissprot-val-FCNet-baseline 1shot 5way, Acc: 56.56% +- 1.02%, Model: checkpoints/baseline_swissprot_1_5/swissprot/baseline_FCNet/20231211_084941/best_model.tar 
+Time: 20231211-090918, Setting: swissprot-test-FCNet-baseline 1shot 5way, Acc: 52.36% +- 0.89%, Model: checkpoints/baseline_swissprot_1_5/swissprot/baseline_FCNet/20231211_084941/best_model.tar 

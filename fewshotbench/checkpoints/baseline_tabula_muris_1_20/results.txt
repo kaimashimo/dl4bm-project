@@ -1,0 +1,3 @@
+Time: 20231211-143546, Setting: tabula_muris-train-FCNet-baseline 1shot 20way, Acc: 87.13% +- 0.43%, Model: checkpoints/baseline_tabula_muris_1_20/tabula_muris/baseline_FCNet/20231211_135736/best_model.tar 
+Time: 20231211-143952, Setting: tabula_muris-val-FCNet-baseline 1shot 20way, Acc: 57.67% +- 0.47%, Model: checkpoints/baseline_tabula_muris_1_20/tabula_muris/baseline_FCNet/20231211_135736/best_model.tar 
+Time: 20231211-144414, Setting: tabula_muris-test-FCNet-baseline 1shot 20way, Acc: 58.00% +- 0.46%, Model: checkpoints/baseline_tabula_muris_1_20/tabula_muris/baseline_FCNet/20231211_135736/best_model.tar 
