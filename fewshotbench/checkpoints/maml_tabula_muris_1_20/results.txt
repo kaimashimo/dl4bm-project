@@ -1,0 +1,3 @@
+Time: 20231210-150156, Setting: tabula_muris-train-FCNet-maml 1shot 20way, Acc: 8.67% +- 0.18%, Model: checkpoints/maml_tabula_muris_1_20/tabula_muris/maml_FCNet/20231210_144910/best_model.tar 
+Time: 20231210-150239, Setting: tabula_muris-val-FCNet-maml 1shot 20way, Acc: 7.67% +- 0.21%, Model: checkpoints/maml_tabula_muris_1_20/tabula_muris/maml_FCNet/20231210_144910/best_model.tar 
+Time: 20231210-150321, Setting: tabula_muris-test-FCNet-maml 1shot 20way, Acc: 7.14% +- 0.18%, Model: checkpoints/maml_tabula_muris_1_20/tabula_muris/maml_FCNet/20231210_144910/best_model.tar 

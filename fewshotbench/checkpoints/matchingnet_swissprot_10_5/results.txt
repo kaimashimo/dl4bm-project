@@ -1,0 +1,3 @@
+Time: 20231210-172257, Setting: swissprot-train-FCNet-matchingnet 10shot 5way, Acc: 97.44% +- 0.30%, Model: checkpoints/matchingnet_swissprot_10_5/swissprot/matchingnet_FCNet/20231210_171257/best_model.tar 
+Time: 20231210-172350, Setting: swissprot-val-FCNet-matchingnet 10shot 5way, Acc: 72.66% +- 0.69%, Model: checkpoints/matchingnet_swissprot_10_5/swissprot/matchingnet_FCNet/20231210_171257/best_model.tar 
+Time: 20231210-172433, Setting: swissprot-test-FCNet-matchingnet 10shot 5way, Acc: 65.83% +- 0.53%, Model: checkpoints/matchingnet_swissprot_10_5/swissprot/matchingnet_FCNet/20231210_171257/best_model.tar 

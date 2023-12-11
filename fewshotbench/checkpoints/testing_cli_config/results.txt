@@ -1,0 +1,3 @@
+Time: 20231210-113115, Setting: swissprot-train-FCNet-protonet 5shot 5way, Acc: 96.48% +- 0.38%, Model: checkpoints/testing_cli_config/swissprot/protonet_FCNet/20231210_112755/best_model.tar 
+Time: 20231210-113159, Setting: swissprot-val-FCNet-protonet 5shot 5way, Acc: 68.56% +- 0.85%, Model: checkpoints/testing_cli_config/swissprot/protonet_FCNet/20231210_112755/best_model.tar 
+Time: 20231210-113237, Setting: swissprot-test-FCNet-protonet 5shot 5way, Acc: 60.13% +- 0.62%, Model: checkpoints/testing_cli_config/swissprot/protonet_FCNet/20231210_112755/best_model.tar 

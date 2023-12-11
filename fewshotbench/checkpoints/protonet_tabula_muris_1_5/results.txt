@@ -1,0 +1,3 @@
+Time: 20231210-131225, Setting: tabula_muris-train-FCNet-protonet 1shot 5way, Acc: 94.19% +- 0.63%, Model: checkpoints/protonet_tabula_muris_1_5/tabula_muris/protonet_FCNet/20231210_131014/best_model.tar 
+Time: 20231210-131259, Setting: tabula_muris-val-FCNet-protonet 1shot 5way, Acc: 80.49% +- 1.00%, Model: checkpoints/protonet_tabula_muris_1_5/tabula_muris/protonet_FCNet/20231210_131014/best_model.tar 
+Time: 20231210-131338, Setting: tabula_muris-test-FCNet-protonet 1shot 5way, Acc: 81.51% +- 0.95%, Model: checkpoints/protonet_tabula_muris_1_5/tabula_muris/protonet_FCNet/20231210_131014/best_model.tar 

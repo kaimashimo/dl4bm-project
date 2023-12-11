@@ -1,0 +1,3 @@
+Time: 20231210-195418, Setting: swissprot-train-FCNet-baseline 1shot 5way, Acc: 74.54% +- 0.99%, Model: checkpoints/baseline_swissprot_1_5/swissprot/baseline_FCNet/20231210_193859/best_model.tar 
+Time: 20231210-195630, Setting: swissprot-val-FCNet-baseline 1shot 5way, Acc: 58.13% +- 1.02%, Model: checkpoints/baseline_swissprot_1_5/swissprot/baseline_FCNet/20231210_193859/best_model.tar 
+Time: 20231210-195832, Setting: swissprot-test-FCNet-baseline 1shot 5way, Acc: 54.82% +- 0.90%, Model: checkpoints/baseline_swissprot_1_5/swissprot/baseline_FCNet/20231210_193859/best_model.tar 

@@ -1,0 +1,3 @@
+Time: 20231210-151423, Setting: tabula_muris-train-FCNet-maml 5shot 5way, Acc: 95.34% +- 0.48%, Model: checkpoints/maml_tabula_muris_5_5/tabula_muris/maml_FCNet/20231210_150442/best_model.tar 
+Time: 20231210-151458, Setting: tabula_muris-val-FCNet-maml 5shot 5way, Acc: 85.49% +- 0.75%, Model: checkpoints/maml_tabula_muris_5_5/tabula_muris/maml_FCNet/20231210_150442/best_model.tar 
+Time: 20231210-151534, Setting: tabula_muris-test-FCNet-maml 5shot 5way, Acc: 86.19% +- 0.66%, Model: checkpoints/maml_tabula_muris_5_5/tabula_muris/maml_FCNet/20231210_150442/best_model.tar 

@@ -1,0 +1,3 @@
+Time: 20231210-183036, Setting: tabula_muris-train-FCNet-matchingnet 1shot 20way, Acc: 90.74% +- 0.37%, Model: checkpoints/matchingnet_tabula_muris_1_20/tabula_muris/matchingnet_FCNet/20231210_182455/best_model.tar 
+Time: 20231210-183116, Setting: tabula_muris-val-FCNet-matchingnet 1shot 20way, Acc: 52.49% +- 0.49%, Model: checkpoints/matchingnet_tabula_muris_1_20/tabula_muris/matchingnet_FCNet/20231210_182455/best_model.tar 
+Time: 20231210-183230, Setting: tabula_muris-test-FCNet-matchingnet 1shot 20way, Acc: 52.05% +- 0.45%, Model: checkpoints/matchingnet_tabula_muris_1_20/tabula_muris/matchingnet_FCNet/20231210_182455/best_model.tar 
