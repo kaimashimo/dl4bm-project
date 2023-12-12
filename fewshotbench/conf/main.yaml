@@ -2,12 +2,21 @@ defaults:
   - dataset: tabula_muris
   - method: maml
 
-model: FCNet
+    # model: FCNet
 n_way: ???
 n_shot: ???
 n_query: ???
 
 mode: train
+
+hidden_size: 512
+dropout: 0.5
+n_layers: 2
+
+model:
+ hidden_size: 512
+ dropout: 0.5
+ n_layers: 2
 
 exp:
   name: ???
