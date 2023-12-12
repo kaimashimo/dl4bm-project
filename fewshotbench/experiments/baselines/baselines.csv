@@ -47,9 +47,9 @@
 45,baseline,swissprot,5,20,,,,,,
 46,baseline,swissprot,10,5,98.84,0.14,79.44,0.7,70.35,0.46
 47,baseline,swissprot,10,20,,,,,,
-48,baseline_pp,tabula_muris,1,5,,,,,,
-49,baseline_pp,tabula_muris,1,20,,,,,,
-50,baseline_pp,tabula_muris,5,5,,,,,,
+48,baseline_pp,tabula_muris,1,5,99.32,0.17,73.98,1.04,67.87,0.98
+49,baseline_pp,tabula_muris,1,20,91.35,0.38,43.6,0.46,39.26,0.44
+50,baseline_pp,tabula_muris,5,5,97.96,0.27,85.65,0.73,81.63,0.74
 51,baseline_pp,tabula_muris,5,20,,,,,,
 52,baseline_pp,tabula_muris,10,5,,,,,,
 53,baseline_pp,tabula_muris,10,20,,,,,,
