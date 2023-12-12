@@ -1,43 +1,47 @@
-# This code is modified from https://github.com/floodsung/LearningToCompare_FSL/blob/master/miniimagenet/miniimagenet_train_few_shot.py and https://github.com/snap-stanford/comet/blob/master/TM/methods/relationnet.py
+# This code is modified from https://github.com/jakesnell/prototypical-networks 
 
 import numpy as np
 import torch
 import torch.nn as nn
 from torch.autograd import Variable
-import math
-
+import torch.nn.functional as F
 from methods.meta_template import MetaTemplate
+
 
 class RelationNet(MetaTemplate):
     def __init__(self, backbone, n_way, n_support):
         super(RelationNet, self).__init__(backbone, n_way, n_support)
         self.loss_fn = nn.CrossEntropyLoss()
-        self.relation_hidden_size = 128
-        self.relation_module = RelationModule(self.feat_dim * 2, self.relation_hidden_size)
+        self.relation_module = RelationModule(input_size = self.feat_dim*2)
 
     def set_forward(self, x, is_feature=False):
         z_support, z_query = self.parse_feature(x, is_feature)
-        z_support = z_support.contiguous().view(self.n_way, self.n_support, -1)
-        z_support = torch.sum(z_support, 1)  # Sum over the support set
 
-        z_query = z_query.contiguous().view(self.n_way * self.n_query, -1)
+        z_support = z_support.contiguous()
+        z_query = z_query.contiguous()
 
-        z_support_ext = z_support.unsqueeze(0).repeat(self.n_way * self.n_query, 1, 1)
-        z_query_ext = z_query.unsqueeze(1).repeat(1, self.n_way, 1).view(self.n_way * self.n_query, self.n_way, -1)
-        
-        # Dimension of [batch_size, feature_dimension * 2]
-        extend_pairs = torch.cat((z_support_ext, z_query_ext), 2).view(-1, self.feat_dim*2)
-        # print('extend_pairs.shape',extend_pairs.shape)
-        # print('self. feat_dim', self.feat_dim)
-        scores = self.relation_module(extend_pairs).view(-1, self.n_way)
-        return scores
+        z_support = z_support.view(self.n_way, self.n_support, -1).sum(1)
+        z_query = z_query.view(self.n_way * self.n_query, -1)
+
+        # Precompute all concatenated pairs
+        concatenated_pairs = torch.cat([torch.cat((z_support, query.repeat(self.n_way, 1)), dim=1) for query in z_query])
     
+        # Pass the concatenated pairs through the Relation Module in batches
+        relation_scores = self.relation_module(concatenated_pairs)
+    
+        # Reshape the scores
+        relation_scores = relation_scores.view(self.n_way * self.n_query, self.n_way)
+
+        return relation_scores
+
+
     def set_forward_loss(self, x):
-        y_query = torch.from_numpy(np.repeat(range(self.n_way), self.n_query))
+        y_query = torch.from_numpy(np.repeat(range( self.n_way ), self.n_query ))
         y_query = Variable(y_query.cuda())
 
         scores = self.set_forward(x)
-        return self.loss_fn(scores, y_query)
+
+        return self.loss_fn(scores, y_query )
 
 def weights_init(m):
     classname = m.__class__.__name__
@@ -55,7 +59,7 @@ def weights_init(m):
         print('Detected Linear in module name')
         n = m.weight.size(1)
         m.weight.data.normal_(0, 0.01)
-        m.bias.data = torch.ones(m.bias.data.size())
+        m.bias.data.zero_()
     elif classname.find('RelationConvBlock') != -1:
         print('Detected RelationConvBlock in module name')
         conv_layer = m.C
@@ -65,34 +69,39 @@ def weights_init(m):
             conv_layer.bias.data.zero_()
 
 class RelationModule(nn.Module):
-
-    def __init__(self, input_size, hidden_size=128):
+    def __init__(self, input_size, hidden_size=512):
         super(RelationModule, self).__init__()
-    
-        self.fc1 = nn.Linear(input_size, hidden_size)
-        self.fc2 = nn.Linear(hidden_size, hidden_size)
-        self.fc3 = nn.Linear(hidden_size, hidden_size)
-        self.fc4 = nn.Linear(hidden_size, 1)
+        self.layer1 = nn.Sequential(nn.Linear(input_size, hidden_size),
+                                    nn.BatchNorm1d(hidden_size),
+                                    nn.ReLU(),
+                                    nn.Dropout(0.40))
+        self.layer2 = nn.Sequential(nn.Linear(hidden_size, hidden_size),
+                                    nn.BatchNorm1d(hidden_size),
+                                    nn.ReLU(),
+                                    nn.Dropout(0.40)) 
+        self.layer3 = nn.Linear(hidden_size, 1)
+        self.sigmoid = nn.Sigmoid()
 
-        self.bn1 = nn.BatchNorm1d(hidden_size)
-        # self.bn2 = nn.BatchNorm1d(hidden_size)
-
-        self.dropout = nn.Dropout(0.5)
-
-        self.layers = nn.Sequential(
-            self.fc1, self.bn1, nn.ReLU(),
-            self.dropout,
-            self.fc2, self.bn1, nn.ReLU(),
-            self.dropout,
-            self.fc3, self.bn1, nn.ReLU(),
-            self.dropout,
-            self.fc4, nn.Sigmoid()
-        )
-
-        self.apply(weights_init)    
-    
     def forward(self, x):
-        out = self.layers(x)
-        return out
+        x = self.layer1(x)
+        x = self.layer2(x)
+        x = self.layer3(x)
+        x = self.sigmoid(x)
+        return x
 
+def cosine_similarity(x, y):
+    # x: N x D
+    # y: M x D
+    n = x.size(0)
+    m = y.size(0)
+    d = x.size(1)
+    assert d == y.size(1)
 
+    # Normalize the rows of x and y
+    x_normalized = F.normalize(x, p=2, dim=1)
+    y_normalized = F.normalize(y, p=2, dim=1)
+
+    # Calculate cosine similarity
+    similarity = torch.mm(x_normalized, y_normalized.transpose(0, 1))
+
+    return -similarity
