@@ -3,14 +3,5 @@ defaults:
 
 name: relationnet
 
-hidden_size: 512
-dropout: 0.5
-n_layers: 2
-
-model:
- hidden_size: 512
- dropout: 0.5
- n_layers: 2
-
 cls:
   _target_: methods.relationnet.RelationNet

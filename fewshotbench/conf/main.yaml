@@ -1,22 +1,13 @@
 defaults:
   - dataset: tabula_muris
-  - method: maml
+  - method: relationnet
 
-    # model: FCNet
+model: FCNet
 n_way: ???
 n_shot: ???
 n_query: ???
 
 mode: train
-
-hidden_size: 512
-dropout: 0.5
-n_layers: 2
-
-model:
- hidden_size: 512
- dropout: 0.5
- n_layers: 2
 
 exp:
   name: ???
@@ -24,6 +15,10 @@ exp:
   resume: false
   seed: 42
   val_freq: 1
+
+hidden_size: 512
+dropout: 0.5
+n_layers: 3
 
 optimizer: Adam
 lr: 0.001
