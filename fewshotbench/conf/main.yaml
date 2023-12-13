@@ -16,10 +16,6 @@ exp:
   seed: 42
   val_freq: 1
 
-hidden_size: 512
-dropout: 0.5
-n_layers: 3
-
 optimizer: Adam
 lr: 0.001
 optimizer_cls:

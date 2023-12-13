@@ -9,10 +9,10 @@ from methods.meta_template import MetaTemplate
 
 
 class RelationNet(MetaTemplate):
-    def __init__(self, backbone, n_way, n_support, hidden_size=512, dropout=0.5, n_layers=3):
+    def __init__(self, backbone, n_way, n_support):
         super(RelationNet, self).__init__(backbone, n_way, n_support)
         self.loss_fn = nn.CrossEntropyLoss()
-        self.relation_module = RelationModule(input_size = self.feat_dim*2, hidden_size, dropout, n_layers)
+        self.relation_module = RelationModule(input_size = self.feat_dim*2)
 
     def set_forward(self, x, is_feature=False):
         z_support, z_query = self.parse_feature(x, is_feature)
@@ -44,9 +44,16 @@ class RelationNet(MetaTemplate):
         return self.loss_fn(scores, y_query )
 
 class RelationModule(nn.Module):
-    def __init__(self, input_size, hidden_size=512, dropout=0.5, n_layers=3, device='cuda'):
+    def __init__(self, input_size, device='cuda'):
         super(RelationModule, self).__init__()
         self.device = device
+
+        with open('experiments/relationnet/config', 'r') as file:
+            lines = file.readlines()
+            hidden_size = int(lines[0].strip())  # Reads first line as integer
+            dropout = float(lines[1].strip())    # Reads second line as float
+            n_layers = int(lines[2].strip())     # Reads third line as integer
+
         self.layers = nn.ModuleList([
             nn.Sequential(nn.Linear(input_size if i == 0 else hidden_size, hidden_size),
                           nn.BatchNorm1d(hidden_size),
