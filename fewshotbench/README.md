@@ -13,7 +13,7 @@
 - [6. Configurations](#configurations)
 - [7. Experiment Tracking](#experiment-tracking)
 - [8. References](#references)
-- [9. Slides and Additional Documentation](#slides-and-additional-documentation)
+- [9. Additional Documentation](#Additional-Documentation)
 
 
 
@@ -145,7 +145,7 @@ To log in to WandB, run `wandb login` and enter the API key provided on the webs
 Algorithm implementations based on [COMET](https://github.com/snap-stanford/comet) and [CloserLookFewShot](https://github.com/wyharveychen/CloserLookFewShot). Dataset
 preprocessing code is modified from each respective dataset paper, where applicable.
 
-## Slides and Additional Documentation
+## Additional Documentation
 
 - [How to integrate a dataset into the benchmark ?](https://docs.google.com/document/d/11JNrneGe9Drb1tO3Sq0ZaIPBeANIzXUxJqm9Kq1oZYM/edit)
 
