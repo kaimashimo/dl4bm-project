@@ -15,7 +15,21 @@
 - [7. Experiment Tracking](#7-experiment-tracking)
 - [8. References](#8-references)
 - [9. Slides and Additional Documentation](#9-slides-and-additional-documentation)
-s
+## Index
+- [Installation](#installation)
+  - [Conda](#conda)
+  - [Pip](#pip)
+- [Usage](#usage)
+  - [Training](#training)
+  - [Testing](#testing)
+- [Datasets](#datasets)
+- [Methods](#methods)
+- [Models](#models)
+- [Configurations](#configurations)
+- [Experiment Tracking](#experiment-tracking)
+- [References](#references)
+- [Slides and Additional Documentation](#slides-and-additional-documentation)
+
 
 
 ## Installation
