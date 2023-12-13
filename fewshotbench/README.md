@@ -1,6 +1,23 @@
 # Few Shot Benchmark for Biomedical Datasets
 
 
+## Index
+- [1. Installation](#1-installation)
+  - [1.1 Conda](#11-conda)
+  - [1.2 Pip](#12-pip)
+- [2. Usage](#2-usage)
+  - [2.1 Training](#21-training)
+  - [2.2 Testing](#22-testing)
+- [3. Datasets](#3-datasets)
+- [4. Methods](#4-methods)
+- [5. Models](#5-models)
+- [6. Configurations](#6-configurations)
+- [7. Experiment Tracking](#7-experiment-tracking)
+- [8. References](#8-references)
+- [9. Slides and Additional Documentation](#9-slides-and-additional-documentation)
+s
+
+
 ## Installation
 
 You have been provided with a `fewshotbench.zip` file containing the code for this benchmark. The accompanying presentation will also help you get started.
