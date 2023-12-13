@@ -1,7 +1,13 @@
-﻿# dl4bm-project
+# Deep Learning for Biomedicine - CS-502 Project
 Authors: Sebastian Breguel, Pierre Lardet and Kai Mashimo
 
-This repository contains the implementations and results of the Project for "Deep learning for Biomedicine" CS-502.
+This is the repository for the project of "Deep Learning for Biomedicine" course (CS-502). It is organized into to folders:
 
-The code implementation is located in the folder `Fewshotbench` and in `report` we have the figures adn tables of the results.
+- `Fewshotbench`: Contains the code implementations for our models. To run the models and replicate our experiments, please refer to this folder. You will find a step-by-step guide in the README.
+
+- `report`: figures and tables representing the results of our experiments. 
+
+For specific instructions on how to run the models and recreate our experiments, please refer to the README file located in the `Fewshotbench` folder.
+
+
 
