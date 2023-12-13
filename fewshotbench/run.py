@@ -35,6 +35,7 @@ def initialize_dataset_model(cfg):
 
     # Instantiate few-shot method class
     model = instantiate(cfg.method.cls, backbone=backbone)
+    # model = instantiate(cfg.method.cls, backbone=backbone, hidden_size=cfg.model_params.hidden_size, dropout_rate=cfg.model_params.dropout, n_layers = cfg.model_params.n_layers)
 
     if torch.cuda.is_available():
         model = model.cuda()
