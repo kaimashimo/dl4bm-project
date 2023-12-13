@@ -12,6 +12,7 @@ class ReNAP(MetaTemplate):
     def __init__(self, backbone, n_way, n_support):
         super(ReNAP, self).__init__(backbone, n_way, n_support)
         self.loss_fn = nn.CrossEntropyLoss()
+        self.adaptive_proto_module = AdaptivePrototypicalModule(self.feat_dim)
         self.relation_module = RelationModule(input_size = self.feat_dim*2)
 
     def set_forward(self, x, is_feature=False):
@@ -20,11 +21,17 @@ class ReNAP(MetaTemplate):
         z_support = z_support.contiguous()
         z_query = z_query.contiguous()
 
-        z_support = z_support.view(self.n_way, self.n_support, -1).sum(1)
+        z_support = z_support.view(self.n_way, self.n_support, -1)
+
+        z_prototypes = torch.zeros(self.n_way, self.feat_dim).cuda()
+        for i in range(self.n_way):
+            z_proto_i = self.adaptive_proto_module(z_support[i])
+            z_prototypes[i] = z_proto_i.mean(0)
+
         z_query = z_query.view(self.n_way * self.n_query, -1)
 
         # Precompute all concatenated pairs
-        concatenated_pairs = torch.cat([torch.cat((z_support, query.repeat(self.n_way, 1)), dim=1) for query in z_query])
+        concatenated_pairs = torch.cat([torch.cat((z_proto.unsqueeze(0).repeat(self.n_way * self.n_query, 1), z_query), dim=1) for z_proto in z_prototypes])
     
         # Pass the concatenated pairs through the Relation Module in batches
         relation_scores = self.relation_module(concatenated_pairs)
@@ -43,12 +50,25 @@ class ReNAP(MetaTemplate):
 
         return self.loss_fn(scores, y_query )
 
+class AdaptivePrototypicalModule(nn.Module):
+    def __init__(self, feature_dim, hidden_size=512):
+        super(AdaptivePrototypicalModule, self).__init__()
+        self.fc1 = nn.Linear(feature_dim, hidden_size)
+        self.fc2 = nn.Linear(hidden_size, hidden_size)
+        self.fc3 = nn.Linear(hidden_size, feature_dim)
+
+    def forward(self, x):
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = self.fc3(x)
+        return x
+
 class RelationModule(nn.Module):
     def __init__(self, input_size, device='cuda'):
         super(RelationModule, self).__init__()
         self.device = device
 
-         with open('experiments/relationnet/config', 'r') as file:
+        with open('experiments/relationnet/config', 'r') as file:
             lines = file.readlines()
             hidden_size = int(lines[0].strip())  # Reads first line as integer
             dropout = float(lines[1].strip())    # Reads second line as float
