@@ -15,6 +15,14 @@ class ReNAP(MetaTemplate):
         self.adaptive_proto_module = AdaptivePrototypicalModule(self.feat_dim)
         self.relation_module = RelationModule(input_size = self.feat_dim*2)
 
+        if torch.cuda.is_available():
+            self.device = torch.device("cuda")
+        # Else if mps is available
+        elif torch.backends.mps.is_available():
+            self.device = torch.device("mps")
+        else:
+            self.device = torch.device("cpu")
+
     def set_forward(self, x, is_feature=False):
         z_support, z_query = self.parse_feature(x, is_feature)
 
@@ -43,8 +51,8 @@ class ReNAP(MetaTemplate):
 
 
     def set_forward_loss(self, x):
-        y_query = torch.from_numpy(np.repeat(range( self.n_way ), self.n_query ))
-        y_query = Variable(y_query.cuda())
+        y_query = torch.from_numpy(np.repeat(range(self.n_way), self.n_query))
+        y_query = Variable(y_query.to(self.device))
 
         scores = self.set_forward(x)
 

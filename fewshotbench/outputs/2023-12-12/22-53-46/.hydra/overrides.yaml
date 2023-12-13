@@ -1,0 +1,3 @@
+- exp.name=relationnet_search_test
+- dataset=swissprot
+- method=relationnet

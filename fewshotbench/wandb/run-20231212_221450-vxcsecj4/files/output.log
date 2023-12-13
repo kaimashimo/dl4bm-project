@@ -1,0 +1,115 @@
+Model Architecture:
+RelationNet(
+  (feature): FCNet(
+    (encoder): Sequential(
+      (0): Sequential(
+        (0): Linear(in_features=1280, out_features=512, bias=True)
+        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU()
+        (3): Dropout(p=0.2, inplace=False)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=512, out_features=512, bias=True)
+        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU()
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+  )
+  (loss_fn): CrossEntropyLoss()
+  (relation_module): RelationModule(
+    (layer1): Sequential(
+      (0): Linear(in_features=1024, out_features=512, bias=True)
+      (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+      (3): Dropout(p=0.4, inplace=False)
+    )
+    (layer2): Sequential(
+      (0): Linear(in_features=512, out_features=512, bias=True)
+      (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+      (3): Dropout(p=0.4, inplace=False)
+    )
+    (layer3): Linear(in_features=512, out_features=1, bias=True)
+    (sigmoid): Sigmoid()
+  )
+)
+Optimizer:
+Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.001
+    maximize: False
+    weight_decay: 0
+)
+Error executing job with overrides: ['method=relationnet', 'dataset=swissprot', 'exp.name=testoncpu']
+Traceback (most recent call last):
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/run.py", line 184, in <module>
+    run()
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/run.py", line 64, in run
+    model = train(train_loader, val_loader, model, cfg)
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/run.py", line 120, in train
+    model.train_loop(epoch, train_loader, optimizer)
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/methods/meta_template.py", line 92, in train_loop
+    loss = self.set_forward_loss(x)
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/methods/relationnet.py", line 40, in set_forward_loss
+    y_query = Variable(y_query.cuda())
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/torch/cuda/__init__.py", line 239, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled
+Traceback (most recent call last):
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/run.py", line 184, in <module>
+    run()
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/run.py", line 64, in run
+    model = train(train_loader, val_loader, model, cfg)
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/run.py", line 120, in train
+    model.train_loop(epoch, train_loader, optimizer)
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/methods/meta_template.py", line 92, in train_loop
+    loss = self.set_forward_loss(x)
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/methods/relationnet.py", line 40, in set_forward_loss
+    y_query = Variable(y_query.cuda())
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/torch/cuda/__init__.py", line 239, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled

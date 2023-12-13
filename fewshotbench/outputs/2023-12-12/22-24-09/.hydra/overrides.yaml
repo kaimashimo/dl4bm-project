@@ -1,0 +1,3 @@
+- method=relationnet
+- dataset=swissprot
+- exp.name=testonmps

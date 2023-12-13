@@ -39,7 +39,8 @@ def initialize_dataset_model(cfg):
 
     if torch.cuda.is_available():
         model = model.cuda()
-
+    elif torch.backends.mps.is_available():
+        model = model.to(torch.device("mps"))
     if cfg.method.name == 'maml':
         cfg.method.stop_epoch *= model.n_task  # maml use multiple tasks in one update
 

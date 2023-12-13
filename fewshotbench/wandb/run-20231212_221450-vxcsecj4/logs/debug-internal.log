@@ -1,0 +1,210 @@
+2023-12-12 22:14:50,236 INFO    StreamThr :17579 [internal.py:wandb_internal():86] W&B internal server running at pid: 17579, started at: 2023-12-12 22:14:50.235736
+2023-12-12 22:14:50,237 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: status
+2023-12-12 22:14:50,247 INFO    WriterThread:17579 [datastore.py:open_for_write():85] open: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/run-vxcsecj4.wandb
+2023-12-12 22:14:50,247 DEBUG   SenderThread:17579 [sender.py:send():369] send: header
+2023-12-12 22:14:50,268 DEBUG   SenderThread:17579 [sender.py:send():369] send: run
+2023-12-12 22:14:51,090 INFO    SenderThread:17579 [dir_watcher.py:__init__():211] watching files in: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files
+2023-12-12 22:14:51,090 INFO    SenderThread:17579 [sender.py:_start_run_threads():1100] run started: vxcsecj4 with start time 1702415690.23894
+2023-12-12 22:14:51,092 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: summary_record
+2023-12-12 22:14:51,092 INFO    SenderThread:17579 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-12-12 22:14:51,098 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: check_version
+2023-12-12 22:14:51,098 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: check_version
+2023-12-12 22:14:51,307 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: run_start
+2023-12-12 22:14:51,314 DEBUG   HandlerThread:17579 [system_info.py:__init__():31] System info init
+2023-12-12 22:14:51,314 DEBUG   HandlerThread:17579 [system_info.py:__init__():46] System info init done
+2023-12-12 22:14:51,314 INFO    HandlerThread:17579 [system_monitor.py:start():181] Starting system monitor
+2023-12-12 22:14:51,314 INFO    SystemMonitor:17579 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-12-12 22:14:51,314 INFO    HandlerThread:17579 [system_monitor.py:probe():201] Collecting system info
+2023-12-12 22:14:51,315 INFO    SystemMonitor:17579 [interfaces.py:start():190] Started cpu monitoring
+2023-12-12 22:14:51,315 DEBUG   HandlerThread:17579 [system_info.py:probe():195] Probing system
+2023-12-12 22:14:51,315 INFO    SystemMonitor:17579 [interfaces.py:start():190] Started disk monitoring
+2023-12-12 22:14:51,316 INFO    SystemMonitor:17579 [interfaces.py:start():190] Started gpuapple monitoring
+2023-12-12 22:14:51,317 INFO    SystemMonitor:17579 [interfaces.py:start():190] Started memory monitoring
+2023-12-12 22:14:51,318 INFO    SystemMonitor:17579 [interfaces.py:start():190] Started network monitoring
+2023-12-12 22:14:51,322 DEBUG   HandlerThread:17579 [system_info.py:_probe_git():180] Probing git
+2023-12-12 22:14:51,339 DEBUG   HandlerThread:17579 [system_info.py:_probe_git():188] Probing git done
+2023-12-12 22:14:51,339 DEBUG   HandlerThread:17579 [system_info.py:probe():240] Probing system done
+2023-12-12 22:14:51,339 DEBUG   HandlerThread:17579 [system_monitor.py:probe():210] {'os': 'macOS-13.0.1-arm64-arm-64bit', 'python': '3.10.11', 'heartbeatAt': '2023-12-12T21:14:51.315818', 'startedAt': '2023-12-12T21:14:50.214119', 'docker': None, 'cuda': None, 'args': ('method=relationnet', 'dataset=swissprot', 'exp.name=testoncpu'), 'state': 'running', 'program': '/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/run.py', 'codePath': 'fewshotbench/run.py', 'git': {'remote': 'https://github.com/kaimashimo/dl4bm-project.git', 'commit': '377023d89d020f9d73667f3e66057370777e05e3'}, 'email': 'lardet.pierre@gmail.com', 'root': '/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project', 'host': 'macbook', 'username': 'pierrelardet', 'executable': '/Users/pierrelardet/anaconda3/envs/fewshotbench/bin/python', 'cpu_count': 8, 'cpu_count_logical': 8, 'disk': {'total': 228.27386474609375, 'used': 12.083354949951172}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 8.0}}
+2023-12-12 22:14:51,339 INFO    HandlerThread:17579 [system_monitor.py:probe():211] Finished collecting system info
+2023-12-12 22:14:51,339 INFO    HandlerThread:17579 [system_monitor.py:probe():214] Publishing system info
+2023-12-12 22:14:51,339 DEBUG   HandlerThread:17579 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-12-12 22:14:51,340 DEBUG   HandlerThread:17579 [system_info.py:_save_pip():67] Saving pip packages done
+2023-12-12 22:14:51,340 DEBUG   HandlerThread:17579 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-12-12 22:14:52,096 INFO    Thread-12 :17579 [dir_watcher.py:_on_file_created():272] file/dir created: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/requirements.txt
+2023-12-12 22:14:52,097 INFO    Thread-12 :17579 [dir_watcher.py:_on_file_created():272] file/dir created: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/conda-environment.yaml
+2023-12-12 22:14:52,097 INFO    Thread-12 :17579 [dir_watcher.py:_on_file_created():272] file/dir created: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/wandb-summary.json
+2023-12-12 22:14:55,558 DEBUG   HandlerThread:17579 [system_info.py:_save_conda():86] Saving conda packages done
+2023-12-12 22:14:55,559 INFO    HandlerThread:17579 [system_monitor.py:probe():216] Finished publishing system info
+2023-12-12 22:14:55,570 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: status_report
+2023-12-12 22:14:55,570 DEBUG   SenderThread:17579 [sender.py:send():369] send: files
+2023-12-12 22:14:55,570 INFO    SenderThread:17579 [sender.py:_save_file():1354] saving file wandb-metadata.json with policy now
+2023-12-12 22:14:55,575 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: stop_status
+2023-12-12 22:14:55,575 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: stop_status
+2023-12-12 22:14:55,579 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-12 22:14:55,831 DEBUG   SenderThread:17579 [sender.py:send():369] send: telemetry
+2023-12-12 22:14:55,831 DEBUG   SenderThread:17579 [sender.py:send():369] send: metric
+2023-12-12 22:14:55,831 WARNING SenderThread:17579 [sender.py:send_metric():1305] Seen metric with glob (shouldn't happen)
+2023-12-12 22:14:55,831 DEBUG   SenderThread:17579 [sender.py:send():369] send: telemetry
+2023-12-12 22:14:55,832 DEBUG   SenderThread:17579 [sender.py:send():369] send: config
+2023-12-12 22:14:55,832 DEBUG   SenderThread:17579 [sender.py:send():369] send: config
+2023-12-12 22:14:55,832 DEBUG   SenderThread:17579 [sender.py:send():369] send: metric
+2023-12-12 22:14:55,832 DEBUG   SenderThread:17579 [sender.py:send():369] send: history
+2023-12-12 22:14:55,832 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: summary_record
+2023-12-12 22:14:55,833 INFO    SenderThread:17579 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-12-12 22:14:56,117 INFO    Thread-12 :17579 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/conda-environment.yaml
+2023-12-12 22:14:56,117 INFO    Thread-12 :17579 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/wandb-summary.json
+2023-12-12 22:14:56,117 INFO    Thread-12 :17579 [dir_watcher.py:_on_file_created():272] file/dir created: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/wandb-metadata.json
+2023-12-12 22:14:56,117 INFO    Thread-12 :17579 [dir_watcher.py:_on_file_created():272] file/dir created: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/output.log
+2023-12-12 22:14:56,182 INFO    wandb-upload_0:17579 [upload_job.py:push():133] Uploaded file /var/folders/wv/rkgyh65d1jx0nzbn07gn8f380000gn/T/tmpbe2_tdnfwandb/0swijqpj-wandb-metadata.json
+2023-12-12 22:14:58,127 INFO    Thread-12 :17579 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/output.log
+2023-12-12 22:15:00,851 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: status_report
+2023-12-12 22:15:05,873 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: status_report
+2023-12-12 22:15:10,580 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: stop_status
+2023-12-12 22:15:10,581 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: stop_status
+2023-12-12 22:15:10,897 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: status_report
+2023-12-12 22:15:15,915 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: status_report
+2023-12-12 22:15:20,942 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: status_report
+2023-12-12 22:15:21,247 INFO    Thread-12 :17579 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/config.yaml
+2023-12-12 22:15:25,874 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: stop_status
+2023-12-12 22:15:25,880 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: stop_status
+2023-12-12 22:15:26,228 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: status_report
+2023-12-12 22:15:31,246 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: status_report
+2023-12-12 22:15:35,538 DEBUG   SenderThread:17579 [sender.py:send():369] send: exit
+2023-12-12 22:15:35,538 INFO    SenderThread:17579 [sender.py:send_exit():574] handling exit code: 1
+2023-12-12 22:15:35,539 INFO    SenderThread:17579 [sender.py:send_exit():576] handling runtime: 44
+2023-12-12 22:15:35,541 INFO    SenderThread:17579 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-12-12 22:15:35,541 INFO    SenderThread:17579 [sender.py:send_exit():582] send defer
+2023-12-12 22:15:35,541 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: defer
+2023-12-12 22:15:35,541 INFO    HandlerThread:17579 [handler.py:handle_request_defer():170] handle defer: 0
+2023-12-12 22:15:35,542 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: defer
+2023-12-12 22:15:35,542 INFO    SenderThread:17579 [sender.py:send_request_defer():598] handle sender defer: 0
+2023-12-12 22:15:35,542 INFO    SenderThread:17579 [sender.py:transition_state():602] send defer: 1
+2023-12-12 22:15:35,542 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: defer
+2023-12-12 22:15:35,542 INFO    HandlerThread:17579 [handler.py:handle_request_defer():170] handle defer: 1
+2023-12-12 22:15:35,542 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: defer
+2023-12-12 22:15:35,542 INFO    SenderThread:17579 [sender.py:send_request_defer():598] handle sender defer: 1
+2023-12-12 22:15:35,542 INFO    SenderThread:17579 [sender.py:transition_state():602] send defer: 2
+2023-12-12 22:15:35,542 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: defer
+2023-12-12 22:15:35,542 INFO    HandlerThread:17579 [handler.py:handle_request_defer():170] handle defer: 2
+2023-12-12 22:15:35,542 INFO    HandlerThread:17579 [system_monitor.py:finish():190] Stopping system monitor
+2023-12-12 22:15:35,542 DEBUG   SystemMonitor:17579 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-12-12 22:15:35,543 INFO    HandlerThread:17579 [interfaces.py:finish():202] Joined cpu monitor
+2023-12-12 22:15:35,543 DEBUG   SystemMonitor:17579 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-12-12 22:15:35,543 INFO    HandlerThread:17579 [interfaces.py:finish():202] Joined disk monitor
+2023-12-12 22:15:35,543 DEBUG   SystemMonitor:17579 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-12-12 22:15:35,544 INFO    HandlerThread:17579 [interfaces.py:finish():202] Joined gpuapple monitor
+2023-12-12 22:15:35,545 INFO    HandlerThread:17579 [interfaces.py:finish():202] Joined memory monitor
+2023-12-12 22:15:35,545 INFO    HandlerThread:17579 [interfaces.py:finish():202] Joined network monitor
+2023-12-12 22:15:35,546 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: defer
+2023-12-12 22:15:35,546 INFO    SenderThread:17579 [sender.py:send_request_defer():598] handle sender defer: 2
+2023-12-12 22:15:35,546 INFO    SenderThread:17579 [sender.py:transition_state():602] send defer: 3
+2023-12-12 22:15:35,546 DEBUG   SenderThread:17579 [sender.py:send():369] send: telemetry
+2023-12-12 22:15:35,546 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: defer
+2023-12-12 22:15:35,546 DEBUG   SenderThread:17579 [sender.py:send():369] send: stats
+2023-12-12 22:15:35,546 INFO    HandlerThread:17579 [handler.py:handle_request_defer():170] handle defer: 3
+2023-12-12 22:15:35,546 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: defer
+2023-12-12 22:15:35,546 INFO    SenderThread:17579 [sender.py:send_request_defer():598] handle sender defer: 3
+2023-12-12 22:15:35,546 INFO    SenderThread:17579 [sender.py:transition_state():602] send defer: 4
+2023-12-12 22:15:35,546 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: defer
+2023-12-12 22:15:35,546 INFO    HandlerThread:17579 [handler.py:handle_request_defer():170] handle defer: 4
+2023-12-12 22:15:35,546 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: defer
+2023-12-12 22:15:35,547 INFO    SenderThread:17579 [sender.py:send_request_defer():598] handle sender defer: 4
+2023-12-12 22:15:35,547 INFO    SenderThread:17579 [sender.py:transition_state():602] send defer: 5
+2023-12-12 22:15:35,547 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: defer
+2023-12-12 22:15:35,547 INFO    HandlerThread:17579 [handler.py:handle_request_defer():170] handle defer: 5
+2023-12-12 22:15:35,547 DEBUG   SenderThread:17579 [sender.py:send():369] send: summary
+2023-12-12 22:15:35,547 INFO    SenderThread:17579 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-12-12 22:15:35,547 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: defer
+2023-12-12 22:15:35,547 INFO    SenderThread:17579 [sender.py:send_request_defer():598] handle sender defer: 5
+2023-12-12 22:15:35,547 INFO    SenderThread:17579 [sender.py:transition_state():602] send defer: 6
+2023-12-12 22:15:35,547 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: defer
+2023-12-12 22:15:35,547 INFO    HandlerThread:17579 [handler.py:handle_request_defer():170] handle defer: 6
+2023-12-12 22:15:35,548 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: defer
+2023-12-12 22:15:35,548 INFO    SenderThread:17579 [sender.py:send_request_defer():598] handle sender defer: 6
+2023-12-12 22:15:35,551 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: status_report
+2023-12-12 22:15:35,798 INFO    SenderThread:17579 [sender.py:transition_state():602] send defer: 7
+2023-12-12 22:15:35,798 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: defer
+2023-12-12 22:15:35,798 INFO    HandlerThread:17579 [handler.py:handle_request_defer():170] handle defer: 7
+2023-12-12 22:15:35,799 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: defer
+2023-12-12 22:15:35,799 INFO    SenderThread:17579 [sender.py:send_request_defer():598] handle sender defer: 7
+2023-12-12 22:15:36,321 INFO    Thread-12 :17579 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/config.yaml
+2023-12-12 22:15:36,322 INFO    Thread-12 :17579 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/wandb-summary.json
+2023-12-12 22:15:36,542 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: poll_exit
+2023-12-12 22:15:37,556 INFO    SenderThread:17579 [sender.py:transition_state():602] send defer: 8
+2023-12-12 22:15:37,556 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: poll_exit
+2023-12-12 22:15:37,556 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: defer
+2023-12-12 22:15:37,557 INFO    HandlerThread:17579 [handler.py:handle_request_defer():170] handle defer: 8
+2023-12-12 22:15:37,557 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: defer
+2023-12-12 22:15:37,557 INFO    SenderThread:17579 [sender.py:send_request_defer():598] handle sender defer: 8
+2023-12-12 22:15:37,558 INFO    SenderThread:17579 [job_builder.py:build():232] Attempting to build job artifact
+2023-12-12 22:15:37,558 INFO    SenderThread:17579 [job_builder.py:build():256] is repo sourced job
+2023-12-12 22:15:37,563 INFO    SenderThread:17579 [job_builder.py:build():297] adding wandb-job metadata file
+2023-12-12 22:15:37,568 INFO    SenderThread:17579 [sender.py:transition_state():602] send defer: 9
+2023-12-12 22:15:37,569 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: defer
+2023-12-12 22:15:37,569 INFO    HandlerThread:17579 [handler.py:handle_request_defer():170] handle defer: 9
+2023-12-12 22:15:37,569 DEBUG   SenderThread:17579 [sender.py:send():369] send: artifact
+2023-12-12 22:15:38,329 INFO    Thread-12 :17579 [dir_watcher.py:_on_file_modified():289] file/dir modified: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/output.log
+2023-12-12 22:15:39,233 INFO    wandb-upload_1:17579 [upload_job.py:push():91] Uploaded file /Users/pierrelardet/Library/Application Support/wandb/artifacts/staging/tmp_v7i6cap
+2023-12-12 22:15:39,239 INFO    wandb-upload_0:17579 [upload_job.py:push():91] Uploaded file /Users/pierrelardet/Library/Application Support/wandb/artifacts/staging/tmpz95p3tgv
+2023-12-12 22:15:40,600 INFO    SenderThread:17579 [sender.py:send_artifact():1450] sent artifact job-https___github.com_kaimashimo_dl4bm-project.git_fewshotbench_run.py - {'id': 'QXJ0aWZhY3Q6NjY1NDI4NzU4', 'digest': 'b748e7370404cda2d4f2ce00651c5fa4', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEyMzEyOTQzMQ==', 'latestArtifact': None}, 'version': 'latest'}
+2023-12-12 22:15:40,600 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: defer
+2023-12-12 22:15:40,600 INFO    SenderThread:17579 [sender.py:send_request_defer():598] handle sender defer: 9
+2023-12-12 22:15:40,601 INFO    SenderThread:17579 [dir_watcher.py:finish():359] shutting down directory watcher
+2023-12-12 22:15:41,344 INFO    SenderThread:17579 [dir_watcher.py:finish():389] scan: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files
+2023-12-12 22:15:41,345 INFO    SenderThread:17579 [dir_watcher.py:finish():403] scan save: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/requirements.txt requirements.txt
+2023-12-12 22:15:41,345 INFO    SenderThread:17579 [dir_watcher.py:finish():403] scan save: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/output.log output.log
+2023-12-12 22:15:41,352 INFO    SenderThread:17579 [dir_watcher.py:finish():403] scan save: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/config.yaml config.yaml
+2023-12-12 22:15:41,356 INFO    SenderThread:17579 [dir_watcher.py:finish():403] scan save: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/wandb-summary.json wandb-summary.json
+2023-12-12 22:15:41,362 INFO    SenderThread:17579 [dir_watcher.py:finish():403] scan save: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/conda-environment.yaml conda-environment.yaml
+2023-12-12 22:15:41,363 INFO    SenderThread:17579 [dir_watcher.py:finish():403] scan save: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/wandb-metadata.json wandb-metadata.json
+2023-12-12 22:15:41,364 INFO    SenderThread:17579 [sender.py:transition_state():602] send defer: 10
+2023-12-12 22:15:41,364 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: defer
+2023-12-12 22:15:41,364 INFO    HandlerThread:17579 [handler.py:handle_request_defer():170] handle defer: 10
+2023-12-12 22:15:41,367 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: defer
+2023-12-12 22:15:41,368 INFO    SenderThread:17579 [sender.py:send_request_defer():598] handle sender defer: 10
+2023-12-12 22:15:41,368 INFO    SenderThread:17579 [file_pusher.py:finish():159] shutting down file pusher
+2023-12-12 22:15:41,567 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-12 22:15:41,771 INFO    wandb-upload_1:17579 [upload_job.py:push():133] Uploaded file /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/requirements.txt
+2023-12-12 22:15:41,895 INFO    wandb-upload_0:17579 [upload_job.py:push():133] Uploaded file /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/output.log
+2023-12-12 22:15:42,021 INFO    wandb-upload_3:17579 [upload_job.py:push():133] Uploaded file /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/wandb-summary.json
+2023-12-12 22:15:42,037 INFO    wandb-upload_2:17579 [upload_job.py:push():133] Uploaded file /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/config.yaml
+2023-12-12 22:15:42,062 INFO    wandb-upload_4:17579 [upload_job.py:push():133] Uploaded file /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/files/conda-environment.yaml
+2023-12-12 22:15:42,268 INFO    Thread-11 (_thread_body):17579 [sender.py:transition_state():602] send defer: 11
+2023-12-12 22:15:42,269 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: defer
+2023-12-12 22:15:42,269 INFO    HandlerThread:17579 [handler.py:handle_request_defer():170] handle defer: 11
+2023-12-12 22:15:42,270 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: defer
+2023-12-12 22:15:42,270 INFO    SenderThread:17579 [sender.py:send_request_defer():598] handle sender defer: 11
+2023-12-12 22:15:42,270 INFO    SenderThread:17579 [file_pusher.py:join():164] waiting for file pusher
+2023-12-12 22:15:42,270 INFO    SenderThread:17579 [sender.py:transition_state():602] send defer: 12
+2023-12-12 22:15:42,271 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: defer
+2023-12-12 22:15:42,271 INFO    HandlerThread:17579 [handler.py:handle_request_defer():170] handle defer: 12
+2023-12-12 22:15:42,271 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: defer
+2023-12-12 22:15:42,271 INFO    SenderThread:17579 [sender.py:send_request_defer():598] handle sender defer: 12
+2023-12-12 22:15:44,273 INFO    SenderThread:17579 [sender.py:transition_state():602] send defer: 13
+2023-12-12 22:15:44,274 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: defer
+2023-12-12 22:15:44,275 INFO    HandlerThread:17579 [handler.py:handle_request_defer():170] handle defer: 13
+2023-12-12 22:15:44,275 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: status_report
+2023-12-12 22:15:44,275 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: defer
+2023-12-12 22:15:44,276 INFO    SenderThread:17579 [sender.py:send_request_defer():598] handle sender defer: 13
+2023-12-12 22:15:44,276 INFO    SenderThread:17579 [sender.py:transition_state():602] send defer: 14
+2023-12-12 22:15:44,277 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: defer
+2023-12-12 22:15:44,277 DEBUG   SenderThread:17579 [sender.py:send():369] send: final
+2023-12-12 22:15:44,277 INFO    HandlerThread:17579 [handler.py:handle_request_defer():170] handle defer: 14
+2023-12-12 22:15:44,277 DEBUG   SenderThread:17579 [sender.py:send():369] send: footer
+2023-12-12 22:15:44,278 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: defer
+2023-12-12 22:15:44,278 INFO    SenderThread:17579 [sender.py:send_request_defer():598] handle sender defer: 14
+2023-12-12 22:15:44,279 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: poll_exit
+2023-12-12 22:15:44,279 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: server_info
+2023-12-12 22:15:44,280 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: get_summary
+2023-12-12 22:15:44,280 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: poll_exit
+2023-12-12 22:15:44,281 DEBUG   SenderThread:17579 [sender.py:send_request():396] send_request: server_info
+2023-12-12 22:15:44,282 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: sampled_history
+2023-12-12 22:15:44,463 INFO    MainThread:17579 [wandb_run.py:_footer_history_summary_info():3467] rendering history
+2023-12-12 22:15:44,463 INFO    MainThread:17579 [wandb_run.py:_footer_history_summary_info():3499] rendering summary
+2023-12-12 22:15:44,464 INFO    MainThread:17579 [wandb_run.py:_footer_sync_info():3426] logging synced files
+2023-12-12 22:15:44,465 DEBUG   HandlerThread:17579 [handler.py:handle_request():144] handle_request: shutdown
+2023-12-12 22:15:44,465 INFO    HandlerThread:17579 [handler.py:finish():854] shutting down handler
+2023-12-12 22:15:45,283 INFO    WriterThread:17579 [datastore.py:close():298] close: /Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/wandb/run-20231212_221450-vxcsecj4/run-vxcsecj4.wandb
+2023-12-12 22:15:45,467 INFO    SenderThread:17579 [sender.py:finish():1526] shutting down sender
+2023-12-12 22:15:45,468 INFO    SenderThread:17579 [file_pusher.py:finish():159] shutting down file pusher
+2023-12-12 22:15:45,468 INFO    SenderThread:17579 [file_pusher.py:join():164] waiting for file pusher

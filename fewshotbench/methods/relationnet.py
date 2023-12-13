@@ -12,7 +12,14 @@ class RelationNet(MetaTemplate):
     def __init__(self, backbone, n_way, n_support):
         super(RelationNet, self).__init__(backbone, n_way, n_support)
         self.loss_fn = nn.CrossEntropyLoss()
-        self.relation_module = RelationModule(input_size = self.feat_dim*2)
+        if torch.cuda.is_available():
+            self.device = torch.device("cuda")
+        elif torch.backends.mps.is_available():
+            self.device = torch.device("mps")
+        else:
+            self.device = torch.device("cpu")
+        self.relation_module = RelationModule(input_size = self.feat_dim*2, device=self.device)
+
 
     def set_forward(self, x, is_feature=False):
         z_support, z_query = self.parse_feature(x, is_feature)
@@ -37,7 +44,7 @@ class RelationNet(MetaTemplate):
 
     def set_forward_loss(self, x):
         y_query = torch.from_numpy(np.repeat(range( self.n_way ), self.n_query ))
-        y_query = Variable(y_query.cuda())
+        y_query = Variable(y_query.to(self.device))
 
         scores = self.set_forward(x)
 

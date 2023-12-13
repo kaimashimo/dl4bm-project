@@ -1,0 +1,6 @@
+- exp.name=relationnet_search_test
+- dataset=swissprot
+- method=relationnet
+- model_params.hidden_size=64
+- model_params.dropout=0
+- model_params.n_layers=2

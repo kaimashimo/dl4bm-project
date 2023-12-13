@@ -1,0 +1,5 @@
+- exp.name=relationnet_swissprot_10_5
+- method=relationnet
+- dataset=swissprot
+- n_shot=10
+- n_way=5

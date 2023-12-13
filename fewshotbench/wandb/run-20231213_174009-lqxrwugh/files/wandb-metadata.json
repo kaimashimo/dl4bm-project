@@ -1,0 +1,40 @@
+{
+    "os": "macOS-13.0.1-arm64-arm-64bit",
+    "python": "3.10.11",
+    "heartbeatAt": "2023-12-13T16:40:10.634586",
+    "startedAt": "2023-12-13T16:40:09.692744",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "exp.name=relationnet_swissprot_1_20",
+        "method=relationnet",
+        "dataset=swissprot",
+        "n_shot=1",
+        "n_way=20"
+    ],
+    "state": "running",
+    "program": "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/run.py",
+    "codePath": "fewshotbench/run.py",
+    "git": {
+        "remote": "https://github.com/kaimashimo/dl4bm-project.git",
+        "commit": "45c72ad56fa82130f9cecdb6073a9f4d2b5278cc"
+    },
+    "email": "lardet.pierre@gmail.com",
+    "root": "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project",
+    "host": "macbook",
+    "username": "pierrelardet",
+    "executable": "/Users/pierrelardet/anaconda3/envs/fewshotbench/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "disk": {
+        "total": 228.27386474609375,
+        "used": 12.083354949951172
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 8.0
+    }
+}

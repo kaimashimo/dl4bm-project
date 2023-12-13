@@ -1,0 +1,205 @@
+Model Architecture:
+RelationNet(
+  (feature): FCNet(
+    (encoder): Sequential(
+      (0): Sequential(
+        (0): Linear(in_features=1280, out_features=512, bias=True)
+        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU()
+        (3): Dropout(p=0.2, inplace=False)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=512, out_features=512, bias=True)
+        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU()
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+  )
+  (loss_fn): CrossEntropyLoss()
+  (relation_module): RelationModule(
+    (layer1): Sequential(
+      (0): Linear(in_features=1024, out_features=512, bias=True)
+      (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+      (3): Dropout(p=0.4, inplace=False)
+    )
+    (layer2): Sequential(
+      (0): Linear(in_features=512, out_features=512, bias=True)
+      (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+      (3): Dropout(p=0.4, inplace=False)
+    )
+    (layer3): Linear(in_features=512, out_features=1, bias=True)
+    (sigmoid): Sigmoid()
+  )
+)
+Optimizer:
+Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.001
+    maximize: False
+    weight_decay: 0
+)
+Epoch 0 | Batch 0/100 | Loss 1.607764
+Epoch 0 | Batch 10/100 | Loss 1.572785
+Epoch 0 | Batch 20/100 | Loss 1.522060
+Epoch 0 | Batch 30/100 | Loss 1.487573
+Epoch 0 | Batch 40/100 | Loss 1.460981
+Epoch 0 | Batch 50/100 | Loss 1.441572
+Epoch 0 | Batch 60/100 | Loss 1.421099
+Epoch 0 | Batch 70/100 | Loss 1.405855
+Epoch 0 | Batch 80/100 | Loss 1.398952
+Epoch 0 | Batch 90/100 | Loss 1.383842
+100 Test Acc = 53.28% +- 1.94%
+Epoch 0: 53.28
+best model! save...
+Epoch 1 | Batch 0/100 | Loss 1.289663
+Epoch 1 | Batch 10/100 | Loss 1.240372
+Epoch 1 | Batch 20/100 | Loss 1.253175
+Epoch 1 | Batch 30/100 | Loss 1.240958
+Epoch 1 | Batch 40/100 | Loss 1.231156
+Epoch 1 | Batch 50/100 | Loss 1.228847
+Epoch 1 | Batch 60/100 | Loss 1.229731
+Epoch 1 | Batch 70/100 | Loss 1.241162
+Epoch 1 | Batch 80/100 | Loss 1.239905
+Epoch 1 | Batch 90/100 | Loss 1.233525
+100 Test Acc = 50.77% +- 2.07%
+Epoch 1: 50.77
+Epoch 2 | Batch 0/100 | Loss 1.221580
+Epoch 2 | Batch 10/100 | Loss 1.175068
+Epoch 2 | Batch 20/100 | Loss 1.175047
+Epoch 2 | Batch 30/100 | Loss 1.166414
+Epoch 2 | Batch 40/100 | Loss 1.170438
+Epoch 2 | Batch 50/100 | Loss 1.169270
+Epoch 2 | Batch 60/100 | Loss 1.172083
+Epoch 2 | Batch 70/100 | Loss 1.174596
+Epoch 2 | Batch 80/100 | Loss 1.172905
+Epoch 2 | Batch 90/100 | Loss 1.178762
+100 Test Acc = 51.13% +- 2.00%
+Epoch 2: 51.13
+Epoch 3 | Batch 0/100 | Loss 1.228161
+Epoch 3 | Batch 10/100 | Loss 1.190962
+Epoch 3 | Batch 20/100 | Loss 1.151563
+Epoch 3 | Batch 30/100 | Loss 1.160648
+Epoch 3 | Batch 40/100 | Loss 1.169515
+Epoch 3 | Batch 50/100 | Loss 1.171404
+Epoch 3 | Batch 60/100 | Loss 1.170775
+Epoch 3 | Batch 70/100 | Loss 1.167005
+Epoch 3 | Batch 80/100 | Loss 1.171281
+Epoch 3 | Batch 90/100 | Loss 1.170983
+100 Test Acc = 48.88% +- 2.20%
+Epoch 3: 48.88
+Epoch 4 | Batch 0/100 | Loss 1.139866
+Epoch 4 | Batch 10/100 | Loss 1.138374
+Epoch 4 | Batch 20/100 | Loss 1.145716
+Epoch 4 | Batch 30/100 | Loss 1.137494
+Epoch 4 | Batch 40/100 | Loss 1.127477
+Epoch 4 | Batch 50/100 | Loss 1.126825
+Epoch 4 | Batch 60/100 | Loss 1.125423
+Epoch 4 | Batch 70/100 | Loss 1.126293
+Epoch 4 | Batch 80/100 | Loss 1.124145
+Epoch 4 | Batch 90/100 | Loss 1.124938
+100 Test Acc = 50.77% +- 2.01%
+Epoch 4: 50.77
+Epoch 5 | Batch 0/100 | Loss 1.138809
+Epoch 5 | Batch 10/100 | Loss 1.123690
+Epoch 5 | Batch 20/100 | Loss 1.112256
+Epoch 5 | Batch 30/100 | Loss 1.107244
+Epoch 5 | Batch 40/100 | Loss 1.097179
+Epoch 5 | Batch 50/100 | Loss 1.100567
+Epoch 5 | Batch 60/100 | Loss 1.098599
+Epoch 5 | Batch 70/100 | Loss 1.101944
+Epoch 5 | Batch 80/100 | Loss 1.100996
+Epoch 5 | Batch 90/100 | Loss 1.099683
+Traceback (most recent call last):
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/run.py", line 184, in <module>
+    run()
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/run.py", line 64, in run
+    model = train(train_loader, val_loader, model, cfg)
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/run.py", line 124, in train
+    acc = model.test_loop(val_loader)
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/methods/meta_template.py", line 109, in test_loop
+    for i, (x, _) in enumerate(test_loader):
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 441, in __iter__
+    return self._get_iterator()
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 388, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1042, in __init__
+    w.start()
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/multiprocessing/context.py", line 288, in _Popen
+    return Popen(process_obj)
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/multiprocessing/popen_spawn_posix.py", line 62, in _launch
+    f.write(fp.getbuffer())
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/run.py", line 184, in <module>
+    run()
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/run.py", line 64, in run
+    model = train(train_loader, val_loader, model, cfg)
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/run.py", line 124, in train
+    acc = model.test_loop(val_loader)
+  File "/Users/pierrelardet/Documents/University_Academics/Year_3/Deep_Learning_in_Biomedicine/dl4bm-project/fewshotbench/methods/meta_template.py", line 109, in test_loop
+    for i, (x, _) in enumerate(test_loader):
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 441, in __iter__
+    return self._get_iterator()
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 388, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1042, in __init__
+    w.start()
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/multiprocessing/context.py", line 288, in _Popen
+    return Popen(process_obj)
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/Users/pierrelardet/anaconda3/envs/fewshotbench/lib/python3.10/multiprocessing/popen_spawn_posix.py", line 62, in _launch
+    f.write(fp.getbuffer())
+KeyboardInterrupt

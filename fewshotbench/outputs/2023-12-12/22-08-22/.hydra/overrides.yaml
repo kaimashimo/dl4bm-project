@@ -1,0 +1,3 @@
+- method=baseline
+- dataset=swissprot
+- exp.name=testoncpu

@@ -1,0 +1,5 @@
+- exp.name=relationnet_tabula_muris_1_5
+- method=relationnet
+- dataset=tabula_muris
+- n_shot=1
+- n_way=5

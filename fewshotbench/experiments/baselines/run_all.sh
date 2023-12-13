@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define the methods and datasets as arrays
-methods=("protonet" "maml" "matchingnet" "baseline" "baseline_pp")
-datasets=("swissprot" "tabula_muris")
+methods=("relationnet")
+datasets=("swissprot")
 n_shots=("1" "5" "10")
 n_ways=("5" "20")
 # Loop through each combination of method and dataset

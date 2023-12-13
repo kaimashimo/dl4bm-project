@@ -1,0 +1,2 @@
+python run.py exp.name=baseline_pp_tabula_muris_5_20 method=baseline_pp dataset=tabula_muris n_shot=5 n_way=20
+python run.py exp.name=baseline_pp_tabula_muris_10_20 method=baseline_pp dataset=tabula_muris n_shot=10 n_way=20
