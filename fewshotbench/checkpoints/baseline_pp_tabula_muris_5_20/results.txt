@@ -1,0 +1,3 @@
+Time: 20231213-102317, Setting: tabula_muris-train-FCNet-baseline_pp 5shot 20way, Acc: 97.62% +- 0.12%, Model: checkpoints/baseline_pp_tabula_muris_5_20/tabula_muris/baseline_pp_FCNet/20231213_073644/best_model.tar 
+Time: 20231213-104356, Setting: tabula_muris-val-FCNet-baseline_pp 5shot 20way, Acc: 61.17% +- 0.38%, Model: checkpoints/baseline_pp_tabula_muris_5_20/tabula_muris/baseline_pp_FCNet/20231213_073644/best_model.tar 
+Time: 20231213-110443, Setting: tabula_muris-test-FCNet-baseline_pp 5shot 20way, Acc: 60.88% +- 0.37%, Model: checkpoints/baseline_pp_tabula_muris_5_20/tabula_muris/baseline_pp_FCNet/20231213_073644/best_model.tar 

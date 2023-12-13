@@ -1,0 +1,3 @@
+Time: 20231213-161741, Setting: tabula_muris-train-FCNet-relationnet 1shot 5way, Acc: 84.22% +- 0.93%, Model: checkpoints/relationnet_tabula_muris_1_5/tabula_muris/relationnet_FCNet/20231213_161441/best_model.tar 
+Time: 20231213-161819, Setting: tabula_muris-val-FCNet-relationnet 1shot 5way, Acc: 73.89% +- 1.08%, Model: checkpoints/relationnet_tabula_muris_1_5/tabula_muris/relationnet_FCNet/20231213_161441/best_model.tar 
+Time: 20231213-161857, Setting: tabula_muris-test-FCNet-relationnet 1shot 5way, Acc: 69.38% +- 1.06%, Model: checkpoints/relationnet_tabula_muris_1_5/tabula_muris/relationnet_FCNet/20231213_161441/best_model.tar 
