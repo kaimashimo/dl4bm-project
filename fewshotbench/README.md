@@ -1,36 +1,19 @@
 # Few Shot Benchmark for Biomedical Datasets
 
-
 ## Index
-- [1. Installation](#1-installation)
-  - [1.1 Conda](#11-conda)
-  - [1.2 Pip](#12-pip)
-- [2. Usage](#2-usage)
-  - [2.1 Training](#21-training)
-  - [2.2 Testing](#22-testing)
-- [3. Datasets](#3-datasets)
-- [4. Methods](#4-methods)
-- [5. Models](#5-models)
-- [6. Configurations](#6-configurations)
-- [7. Experiment Tracking](#7-experiment-tracking)
-- [8. References](#8-references)
-- [9. Slides and Additional Documentation](#9-slides-and-additional-documentation)
-
-- 
-## Index2
-- [Installation](#installation)
-  - [Conda](#conda)
-  - [Pip](#pip)
-- [Usage](#usage)
-  - [Training](#training)
-  - [Testing](#testing)
-- [Datasets](#datasets)
-- [Methods](#methods)
-- [Models](#models)
-- [Configurations](#configurations)
-- [Experiment Tracking](#experiment-tracking)
-- [References](#references)
-- [Slides and Additional Documentation](#slides-and-additional-documentation)
+- [1. Installation](#installation)
+  - [1.1 Conda](#conda)
+  - [1.2 Pip](#pip)
+- [2. Usage](#usage)
+  - [2.1 Training](#training)
+  - [2.3 Testing](#testing)
+- [3. Datasets](#datasets)
+- [4. Methods](#methods)
+- [5. Models](#models)
+- [6. Configurations](#configurations)
+- [7. Experiment Tracking](#experiment-tracking)
+- [8. References](#references)
+- [9. Slides and Additional Documentation](#slides-and-additional-documentation)
 
 
 
