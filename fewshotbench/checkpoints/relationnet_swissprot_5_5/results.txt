@@ -1,3 +1,6 @@
 Time: 20231213-181716, Setting: swissprot-train-FCNet-relationnet 5shot 5way, Acc: 87.69% +- 0.83%, Model: checkpoints/relationnet_swissprot_5_5/swissprot/relationnet_FCNet/20231213_181326/best_model.tar 
 Time: 20231213-181758, Setting: swissprot-val-FCNet-relationnet 5shot 5way, Acc: 50.79% +- 0.92%, Model: checkpoints/relationnet_swissprot_5_5/swissprot/relationnet_FCNet/20231213_181326/best_model.tar 
 Time: 20231213-181833, Setting: swissprot-test-FCNet-relationnet 5shot 5way, Acc: 39.12% +- 0.66%, Model: checkpoints/relationnet_swissprot_5_5/swissprot/relationnet_FCNet/20231213_181326/best_model.tar 
+Time: 20231213-194421, Setting: swissprot-train-FCNet-relationnet 5shot 5way, Acc: 67.29% +- 0.99%, Model: checkpoints/relationnet_swissprot_5_5/swissprot/relationnet_FCNet/20231213_194001/best_model.tar 
+Time: 20231213-194507, Setting: swissprot-val-FCNet-relationnet 5shot 5way, Acc: 47.89% +- 0.97%, Model: checkpoints/relationnet_swissprot_5_5/swissprot/relationnet_FCNet/20231213_194001/best_model.tar 
+Time: 20231213-194545, Setting: swissprot-test-FCNet-relationnet 5shot 5way, Acc: 43.71% +- 0.65%, Model: checkpoints/relationnet_swissprot_5_5/swissprot/relationnet_FCNet/20231213_194001/best_model.tar 
